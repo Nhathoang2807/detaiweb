@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dao - HoangKitchen</title>
-  <link rel="stylesheet" href="css/products.css">
+  <title>Giỏ hàng - HoangKitchen</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/products.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
@@ -19,55 +19,65 @@
     <a href="Dao.html">Dao</a>
   </nav>
 
-<a href="index.html" class="logo">
-  HoangKitchen
-</a>
+  <a href="index.html" class="logo">HoangKitchen</a>
 
   <div class="nav-right">
     <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
     <a href="#"><i class="fa-solid fa-user"></i></a>
-    <a href="cart.html">Giỏ Hàng <span class="cart-count">0</span></a>
+    <a href="cart.html">Giỏ hàng <span class="cart-count">0</span></a>
   </div>
 </header>
 
-<section class="shop-hero">
-  <div>
-    <h1>
-        Dao</h1>
-  </div>
-</section>
-
-<section class="shop-page">
-
-  <div class="shop-filter">
-  <div>
-    <button>DAO</button>
+<main class="cart-page">
+  <div class="cart-title">
+    <h1>Giỏ hàng của bạn</h1>
+    <p>Vui lòng nhập thông tin giao hàng và kiểm tra lại sản phẩm trước khi đặt hàng.</p>
   </div>
 
-  <select>
-    <option>NỔI BẬT</option>
-    <option>GIÁ THẤP ĐẾN CAO</option>
-    <option>GIÁ CAO ĐẾN THẤP</option>
-  </select>
-</div>
+  <div class="cart-layout">
+    <form class="customer-form" id="orderForm">
+      <h2>Thông tin giao hàng</h2>
 
-<div class="shop-grid">
+      <div class="form-group">
+        <label for="fullName">Họ và tên</label>
+        <input type="text" id="fullName" placeholder="Nhập họ và tên" required>
+      </div>
 
-  <div class="shop-card">
-    <img src="images/knife.webp" class="contain-img" alt="">
-    <p class="stars">★★★★★ <small>(39)</small></p>
-    <h3>Dao đầu bếp Zwilling x Osmo</h3>
-    <p>Cắt, thái và sơ chế nguyên liệu chuyên nghiệp hơn.</p>
-    <div class="shop-price">
-      <span>$149.99</span>
-      <del>$159.99</del>
-    </div>
-    <button>THÊM VÀO GIỎ</button>
+      <div class="form-group">
+        <label for="phone">Số điện thoại</label>
+        <input type="tel" id="phone" placeholder="Nhập số điện thoại" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Địa chỉ nhận hàng</label>
+        <textarea id="address" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="note">Ghi chú thêm</label>
+        <textarea id="note" placeholder="Ví dụ: giao giờ hành chính, gọi trước khi giao..."></textarea>
+      </div>
+
+      <button type="submit" class="order-btn">ĐẶT HÀNG</button>
+      <a class="continue-shopping" href="ShopAll.html">← Tiếp tục mua sắm</a>
+    </form>
+
+    <section class="cart-summary">
+      <h2>Sản phẩm đã thêm</h2>
+      <div id="emptyCart" class="empty-cart">Giỏ hàng của bạn đang trống.</div>
+      <div id="cartList"></div>
+
+      <div class="cart-total-box">
+        <span>Tổng tiền</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+
+      <div class="cart-actions">
+        <button type="button" id="clearCartBtn">Xóa giỏ hàng</button>
+      </div>
+    </section>
   </div>
-
-</div>
-
-</section>
+</main>
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -134,6 +144,9 @@
   </div>
 
 </footer>
-  <script src="js/cart.js"></script>
+
+  
+
+<script src="js/cart.js"></script>
 </body>
 </html>
