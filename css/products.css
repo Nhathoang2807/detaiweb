@@ -1,67 +1,106 @@
+/* Product listing pages - redesigned */
 .product-header {
   position: absolute;
 }
 
 .shop-hero {
-  height: 380px;
-  background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url("../images/shopall.webp");
+  min-height: 460px;
+  background-image: linear-gradient(90deg, rgba(43,24,16,.78), rgba(43,24,16,.35)), url("../images/shopall.webp");
   background-size: cover;
   background-position: center;
-
   display: flex;
-  align-items: center;
-  padding-left: 300px;
-
+  align-items: flex-end;
+  padding: 150px 7vw 70px;
   color: white;
 }
 
+.shop-hero > div {
+  max-width: 720px;
+  background: rgba(43,24,16,.55);
+  border: 1px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(8px);
+  border-radius: 32px;
+  padding: 34px;
+}
+
 .shop-hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.12;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
 }
 
 .shop-hero p {
-  max-width: 600px;
-  line-height: 1.6;
+  max-width: 650px;
+  line-height: 1.75;
+  color: rgba(255,255,255,.86);
 }
 
 .shop-page {
-  padding: 45px 300px;
-  background: white;
+  padding: 62px 7vw 95px;
+  background: #fff8ef;
 }
 
 .shop-filter {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 35px;
+  gap: 18px;
+  margin-bottom: 36px;
+  align-items: center;
+}
+
+.shop-filter > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .shop-filter button,
 .shop-filter select {
-  padding: 12px 22px;
+  padding: 12px 18px;
   background: white;
-  border: 1px solid #ccc;
-  font-weight: bold;
+  border: 1px solid #ead8c5;
+  border-radius: 999px;
+  color: #2c241e;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.shop-filter button:hover,
+.shop-filter select:hover {
+  border-color: #b85b28;
 }
 
 .shop-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 35px;
+  gap: 30px;
 }
 
 .shop-card {
   position: relative;
   display: flex;
   flex-direction: column;
+  background: white;
+  border: 1px solid rgba(122,52,25,.08);
+  border-radius: 32px;
+  padding: 18px;
+  box-shadow: 0 18px 45px rgba(65,36,20,.12);
+  transition: .28s ease;
 }
 
+.shop-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 55px rgba(65,36,20,.18);
+}
 
 .shop-card img {
   width: 100%;
-  height: 420px;
+  height: 350px;
   object-fit: cover;
   display: block;
+  border-radius: 24px;
+  background: #fff;
 }
 
 .shop-card img.contain-img {
@@ -71,174 +110,104 @@
 
 .sale-tag {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 30px;
+  left: 30px;
   z-index: 2;
-
-  background: white;
-  color: black;
-  padding: 6px 12px;
-  font-size: 14px;
+  background: #fff2df;
+  color: #7a3419;
+  border: 1px solid #ead8c5;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
 }
 
 .stars {
-  color: #ff4040;
-  font-size: 20px;
-  margin-top: 12px;
+  color: #d94332;
+  font-size: 18px;
+  margin-top: 16px;
 }
 
 .stars small {
-  color: #333;
-  font-size: 14px;
+  color: #74685e;
+  font-size: 13px;
 }
 
 .shop-card h3 {
   margin: 10px 0;
   font-size: 18px;
+  line-height: 1.35;
+  color: #2c241e;
 }
 
 .shop-card p {
-  line-height: 1.5;
+  line-height: 1.6;
+  color: #74685e;
+  font-size: 14px;
 }
 
 .shop-price {
-  margin: 15px 0;
+  margin: 16px 0 20px;
 }
 
 .shop-price span {
-  color: #ff4040;
+  color: #b85b28;
   font-size: 18px;
-  margin-right: 15px;
+  font-weight: 900;
+  margin-right: 12px;
 }
 
 .shop-price del {
-  color: #777;
+  color: #999;
 }
 
 .shop-card button {
   width: 100%;
-  padding: 18px;
+  padding: 16px 18px;
   border: none;
-  border-radius: 40px;
-  background: #ff4040;
+  border-radius: 999px;
+  background: #b85b28;
   color: white;
-  font-weight: bold;
-   margin-top: auto;
-}
-
-/* ===== FONT FIX FOR VIETNAMESE TEXT ON PRODUCT PAGES ===== */
-.shop-hero h1,
-.shop-filter button,
-.shop-filter select,
-.shop-card h3,
-.shop-card button,
-.sale-tag {
-  font-family: "Be Vietnam Pro", Arial, sans-serif;
-  letter-spacing: 0.3px;
-  line-height: 1.2;
-}
-
-.shop-hero h1 {
-  font-size: 44px;
   font-weight: 900;
+  margin-top: auto;
+  cursor: pointer;
 }
 
-.shop-card h3 {
-  font-size: 17px;
-  font-weight: 800;
-}
+.shop-card button:hover { background: #7a3419; }
 
-.sale-tag {
-  font-size: 13px;
-}
-
-/* ================= PRODUCTS RESPONSIVE FIX ================= */
-@media (max-width: 1024px) {
-  .shop-hero {
-    padding-left: 80px;
-  }
-
-  .shop-page {
-    padding: 40px 48px;
-  }
+@media (max-width: 1100px) {
+  .shop-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
-  .product-header {
-    position: absolute;
-  }
+  .product-header { position: absolute; }
 
   .shop-hero {
-    height: 430px;
-    padding: 150px 20px 42px;
-    align-items: flex-end;
-    background-position: center;
+    min-height: 520px;
+    padding: 220px 18px 46px;
   }
 
-  .shop-hero h1 {
-    font-size: 36px;
-    line-height: 1.2;
-    margin-bottom: 12px;
+  .shop-hero > div {
+    padding: 24px;
+    border-radius: 26px;
   }
 
-  .shop-hero p {
-    font-size: 14px;
-    line-height: 1.6;
-    max-width: 100%;
-  }
+  .shop-hero h1 { font-size: 36px; }
+  .shop-hero p { font-size: 14px; }
 
-  .shop-page {
-    padding: 34px 18px;
-  }
+  .shop-page { padding: 42px 18px 70px; }
 
   .shop-filter {
     flex-direction: column;
-    gap: 16px;
     align-items: stretch;
-  }
-
-  .shop-filter div {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
   }
 
   .shop-filter button,
   .shop-filter select {
-    font-size: 12px;
-    padding: 10px 13px;
-  }
-
-  .shop-grid {
-    grid-template-columns: 1fr;
-    gap: 42px;
-  }
-
-  .shop-card img {
-    height: 315px;
-    object-fit: contain;
-    background: #fff;
-  }
-
-  .shop-card h3 {
-    font-size: 17px;
-    line-height: 1.35;
-  }
-
-  .shop-card p {
-    font-size: 14px;
-  }
-
-  .stars {
-    font-size: 18px;
-  }
-
-  .shop-price span {
-    font-size: 16px;
-  }
-
-  .shop-card button {
-    padding: 15px;
     font-size: 13px;
+    padding: 10px 14px;
   }
+
+  .shop-grid { grid-template-columns: 1fr; gap: 30px; }
+  .shop-card img { height: 300px; object-fit: contain; }
 }
