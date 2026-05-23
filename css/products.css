@@ -151,3 +151,94 @@
 .sale-tag {
   font-size: 13px;
 }
+
+/* ================= PRODUCTS RESPONSIVE FIX ================= */
+@media (max-width: 1024px) {
+  .shop-hero {
+    padding-left: 80px;
+  }
+
+  .shop-page {
+    padding: 40px 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-header {
+    position: absolute;
+  }
+
+  .shop-hero {
+    height: 430px;
+    padding: 150px 20px 42px;
+    align-items: flex-end;
+    background-position: center;
+  }
+
+  .shop-hero h1 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .shop-hero p {
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  .shop-page {
+    padding: 34px 18px;
+  }
+
+  .shop-filter {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .shop-filter div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .shop-filter button,
+  .shop-filter select {
+    font-size: 12px;
+    padding: 10px 13px;
+  }
+
+  .shop-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .shop-card img {
+    height: 315px;
+    object-fit: contain;
+    background: #fff;
+  }
+
+  .shop-card h3 {
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  .shop-card p {
+    font-size: 14px;
+  }
+
+  .stars {
+    font-size: 18px;
+  }
+
+  .shop-price span {
+    font-size: 16px;
+  }
+
+  .shop-card button {
+    padding: 15px;
+    font-size: 13px;
+  }
+}
