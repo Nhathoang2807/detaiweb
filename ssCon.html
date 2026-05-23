@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Seasoning Collection - HoangKitchen</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="detail-header">
+
+    <nav class="detail-nav-left">
+      <a href="ShopAll.html">Mua sắm tất cả</a>
+      <a href="GiaVi.html">Gia vị</a>
+      <a href="MayXay.html">Máy Xay</a>
+    </nav>
+
+    <a href="index.html" class="detail-logo">HoangKitchen</a>
+
+    <div class="detail-nav-right">
+      <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="#"><i class="fa-solid fa-user"></i></a>
+      <a href="cart.html">Giỏ hàng</a>
+    </div>
+
+  </header>
+
+  <!-- CHI TIẾT SẢN PHẨM -->
+<section class="product-detail">
+
+  <div class="breadcrumb">
+    <a href="index.html">Trang chủ</a>
+    <span>→</span>
+    <span>Bộ sưu tập gia vị 4 món</span>
+  </div>
+
+  <div class="detail-container">
+
+    <!-- HÌNH ẢNH BÊN TRÁI -->
+    <div class="detail-left">
+
+      <div class="main-product-img">
+        <img id="mainImage" src="images/seasoning.webp" alt="">
+      </div>
+
+      <div class="thumb-list">
+        <img class="active-thumb" src="images/seasoning.webp" onclick="changeImage(this)" alt="">
+        <img src="images/sc1.jpg" onclick="changeImage(this)" alt="">
+        <img src="images/sc2.webp" onclick="changeImage(this)" alt="">
+        <img src="images/sc3.webp" onclick="changeImage(this)" alt="">
+        <img src="images/sc4.webp" onclick="changeImage(this)" alt="">
+      </div>
+
+    </div>
+
+    <!-- THÔNG TIN BÊN PHẢI -->
+    <div class="detail-right">
+
+      <div class="rating">
+        <span>★★★★★</span>
+        <p>4.9 sao (4,130 đánh giá)</p>
+      </div>
+
+      <h1>Bộ sưu tập gia vị 4 món</h1>
+
+      <div class="detail-price">
+        <del>$39.99</del>
+        <span>$27.88</span>
+        <b>Giảm 30%</b>
+      </div>
+
+      <div class="description">
+        <h3>— MÔ TẢ SẢN PHẨM</h3>
+
+        <p>
+          <strong>Gia vị thịt nướng đặc trưng:</strong>
+          Mang hương vị nhà hàng bít tết vào căn bếp của bạn.
+          Hỗn hợp gia vị này phù hợp để nướng, áp chảo, ướp thịt và sử dụng trong nhiều món ăn hằng ngày.
+        </p>
+
+        <p>
+          <strong>Gia vị gà thảo mộc:</strong>
+          Giúp các món gà trở nên thơm ngon và hấp dẫn hơn.
+          Được kết hợp từ thảo mộc tươi và gia vị cao cấp, sản phẩm mang lại hương vị đậm đà cho mỗi bữa ăn.
+        </p>
+
+        <p>
+          <strong>Gia vị hải sản:</strong>
+          Làm nổi bật hương vị tươi ngon của các món cá, tôm và hải sản.
+          Hỗn hợp này tạo sự cân bằng giữa hương thơm, vị đậm đà và độ tươi mát cho món ăn.
+        </p>
+
+        <p>
+          <strong>Gia vị rau củ:</strong>
+          Giúp các món rau củ trở nên hấp dẫn và ngon miệng hơn.
+          Hỗn hợp gia vị lấy cảm hứng từ khu vườn, phù hợp cho rau củ, salad và các món ăn thường ngày.
+        </p>
+      </div>
+
+      <div class="buy-options">
+
+        <label class="option-box">
+          <input type="radio" name="buy-option">
+          <div>
+            <h4>Đăng ký mua định kỳ</h4>
+            <p><del>$27.88</del> <span>$23.70</span></p>
+          </div>
+          <small>Tiết kiệm đến 15%</small>
+        </label>
+
+        <label class="option-box">
+          <input type="radio" name="buy-option" checked>
+          <div>
+            <h4>Mua một lần</h4>
+            <p>$27.88</p>
+          </div>
+        </label>
+
+      </div>
+
+      <div class="quantity-box">
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+      </div>
+
+      <button class="detail-add-cart">THÊM VÀO GIỎ</button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-top">
+
+    <div class="footer-left">
+      <h2>
+        KẾT NỐI VỚI CHÚNG TÔI <br>
+        <span>@HOANGKITCHEN</span>
+      </h2>
+
+      <div class="footer-logo">
+        HoangKitchen
+      </div>
+
+      <div class="footer-social">
+        <i class="fa-brands fa-tiktok"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </div>
+
+    <div class="footer-links">
+
+      <div class="footer-column">
+        <a href="#">Về chúng tôi</a>
+        <a href="#">Câu hỏi thường gặp</a>
+        <a href="#">Chính sách đổi trả</a>
+        <a href="#">Điều khoản dịch vụ</a>
+        <a href="#">Thẻ quà tặng</a>
+      </div>
+
+      <div class="footer-column">
+        <a href="#">Tài khoản</a>
+        <a href="#">Hệ thống cửa hàng</a>
+        <a href="#">Liên hệ</a>
+        <a href="#">Chính sách bảo mật</a>
+      </div>
+
+    </div>
+
+    <div class="footer-newsletter">
+
+      <h3>ĐĂNG KÝ NHẬN TIN TỪ HOANGKITCHEN</h3>
+
+      <p>
+        Nhận thông tin sớm nhất về sản phẩm mới,
+        dụng cụ làm bếp và các chương trình khuyến mãi!
+      </p>
+
+      <div class="newsletter-box">
+        <input type="email" placeholder="Email của bạn">
+        <button>ĐĂNG KÝ</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>Điều khoản & Điều kiện</p>
+    <p>© 2026 HoangKitchen. Đã đăng ký bản quyền.</p>
+  </div>
+
+</footer>
+
+
+<script>
+  function changeImage(thumbnail) {
+    const mainImage = document.getElementById("mainImage");
+    const thumbnails = document.querySelectorAll(".thumb-list img");
+
+    mainImage.src = thumbnail.src;
+
+    thumbnails.forEach(function(img) {
+      img.classList.remove("active-thumb");
+    });
+
+    thumbnail.classList.add("active-thumb");
+  }
+</script>
+</body>
+</html>
